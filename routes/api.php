@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Borrow
     Route::post('/books/{book}/borrow',[BorrowController::class,'borrow']);
-    Route::post('/borrows/{borrow}/return',[BorrowController::class,'return']);
+    Route::post('/borrows/{borrow}/return',[BorrowController::class,'returnBook']);
     Route::get('/me/borrows',[BorrowController::class,'myBorrows']);
 
     // Admin borrows
